@@ -1,13 +1,11 @@
 <?php include 'layout/header.php'?>
 <?php include 'layout/navbar.php'?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 welcome_view">
-            <img src="https://images.unsplash.com/photo-1476611317561-60117649dd94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8618fb66616c1d53a41705312c034068&auto=format&fit=crop&w=750&q=80" alt="du bon vin ma gueule">
-        </div>
-    </div>
+<section id="cover">
+ <!-- image du début -->
+</section>
 
+<div class="container">
     <!-- Three columns of text below the carousel -->
     <div class="row products_collection">
         <div class="col-lg-4">
@@ -29,8 +27,8 @@
           <p><a class="btn btn-lg" href="#" role="button">Ajouter au panier</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-</div>
 
+</div><!-- end of container -->
 
 
 
