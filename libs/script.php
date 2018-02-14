@@ -2,23 +2,24 @@
 
 function modifStock(&$pdo)
 {
+    $variete = 'variété';
     $disponibilite = 'disponibilité';
     $qte = $_POST('qte');
 
-    $stk = $pdo->query('SELECT disponibilité FROM aperirond');
+    $stk = $pdo->query('SELECT variété, disponibilité FROM aperirond');
     while ($stk->fetch()) {
-        if ($stk > $qte) {
-            $TTstk = $stk - $qte;
+        if ($variete($stk > $qte)) {
+            $TTstk = $variete($stk - $qte);
             try {
                 $pdo->exec("INSERT INTO `aperirond` (disponibilité) VALUES ('$disponibilite')");
             } catch (PDOException $e) {
 
             }
             return $TTstk;
-        } else if ($stk < $qte) {
+        } else if ($variete($stk < $qte)) {
            echo("Désolée, mais vous ne pouvez plus ajouter d'éléments de cette variété ... Stock insuffisant");
         }
-        else if($stk = 0){
+        else if($variete($stk = 0)){
             echo ("plus de stocks disponible");
         }
 
