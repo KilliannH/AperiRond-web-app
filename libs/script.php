@@ -1,4 +1,10 @@
 <?php include 'layout/header.php'?>
+<?php include './pdo.php';
+
+function modifStock(&$pdo){
+    $pdo->query('SELECT stock FROM Aperi_Rond');
+
+}
 
 
 
@@ -7,4 +13,4 @@
 
 
 
-<?php include 'layout/footer.php'?>
+include 'layout/footer.php'?>
