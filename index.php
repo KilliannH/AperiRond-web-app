@@ -7,31 +7,72 @@
 
 <div class="container">
     <!-- Three columns of text below the carousel -->
+    <div class="col-md-12 variété_headers"><h1>Gouts</h1><hr></div>
     <div class="row products_collection">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="280" height="280">
-          <h2>Variété 1</h2>
-          <p>Prix</p>
-          <p><a class="btn btn-lg" href="#" role="button">Ajouter au panier</a></p>
+          <img class="rounded-circle" src="/libs/details_img/siroperable.jpg" alt="Generic placeholder image" width="260px" height="260px">
+          <h2 class="variété_title">Sirop d'érable</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
         </div><!-- /.col-lg-4 -->
+
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="280" height="280">
-          <h2>Variété 2</h2>
-          <p>Prix</p>
-          <p><a class="btn btn-lg" href="#" role="button">Ajouter au panier</a></p>
+            <img class="rounded-circle" src="/libs/details_img/nutella.jpg" alt="Generic placeholder image" width="260px" height="260px">
+            <h2 class="variété_title">Nutella</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
         </div><!-- /.col-lg-4 -->
+
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="280" height="280">
-          <h2>Variété 3</h2>
-          <p>Prix</p>
-          <p><a class="btn btn-lg" href="#" role="button">Ajouter au panier</a></p>
+            <img class="rounded-circle" src="/libs/details_img/fraise.jpg" alt="Generic placeholder image" width="260px" height="260px">
+            <h2 class="variété_title">Fraise</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
         </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+    </div><!-- end of raw -->
+
+    <div class="row products_spaced">
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="/libs/details_img/cactus.jpg" alt="Generic placeholder image" width="260px" height="260px">
+            <h2 class="variété_title">Cactus</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="/libs/details_img/vegan.jpg" width="260px" height="260px">
+            <h2 class="variété_title">Vegan</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="/libs/details_img/chanvre.jpg" alt="Generic placeholder image" width="260px" height="260px">
+            <h2 class="variété_title">Marie Jeanne</h2>
+            <p class="products_prix">5,00 € (unité)</p>
+            <p class="form-group">Quantité
+                <input type="number" class="form-control" placeholder="0">
+            </p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- end of raw -->
+
+    <div class="row products_spaced">
+        <div class="col-md-12 panier_button">
+        <a class="btn btn-primary btn-lg">Ajouter au panier</a>
+        </div>
+    </div>
 
 </div><!-- end of container -->
-
-
-
 
 
 <?php include 'layout/footer.php'?>
