@@ -6,7 +6,7 @@ include  'footer.php';
 ?>
 
 <div class="container">
-        <form action="libs/connection.php" method="post">
+        <form action="../connection.php" method="post">
             <div class="row">
                 <div class="col-md-12 login_spaced">
 
@@ -22,6 +22,8 @@ include  'footer.php';
                 </div>
 
         </form>
+
+    <hr>
 
     <div class="col-md-12 inscription_spaced">
         <form action="envoi.php" method="post">

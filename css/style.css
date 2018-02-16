@@ -12,9 +12,15 @@
     padding-right: 10px;
 }
 
-.nav_minim {
+.nav_minim>div>a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_minim{
     background-color: rgba(114, 200, 204, 0.23);
 }
+
 .nav_minim_right {
     margin-top: 18px;
     text-align: right;
@@ -125,13 +131,22 @@
     text-align: center;
 }
 
+.panier_img {
+    width: 120px;
+    height: 120px;
+    border-radius: 90px;
+}
+
 .variété_panier {
+    text-align: left;
     font-size: 24px;
     padding-top: 10px;
 }
 
 .font_panier {
+    padding-top: 40px;
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 40px;
 }
 
 .panier_spaced {
@@ -141,6 +156,9 @@ margin-top: 0px;
 .panier_img_alligned {
     font-size: 21px;
     padding-top: 10px;
+}
+
+.variété_result {
 }
 
 /* inscription page */
@@ -163,7 +181,11 @@ margin-top: 0px;
 
 .inscription_spaced {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
 }
 
 .form-control {

@@ -5,6 +5,86 @@
 /**
  * @param $pdo  ######################### Fonctions affichages des variétés de la BDD pour visu page vitrine #############################
  */
+
+/// getters here //////
+///
+
+function getNbCommande(&$pdo) {
+
+$variete = [];
+
+$i = 0;
+
+    $quantiteHasChanged = $pdo->query('SELECT variete FROM aperirond WHERE disponibilite!=1000');
+    while($row = $quantiteHasChanged->fetch()) {
+        $variete[$i] = $row['variete'];
+        $i++;
+    }
+    return $i;
+}
+function getVariete(&$pdo) {
+
+    $variete = [];
+
+    $i = 0;
+
+    $quantiteHasChanged = $pdo->query('SELECT variete FROM aperirond WHERE disponibilite!=1000');
+    while($row = $quantiteHasChanged->fetch()) {
+        $variete[$i] =$row['variete'];
+        $i++;
+    }
+
+    return $variete;
+}
+
+
+function getQuantite(&$pdo) {
+
+    $disponibilite = [];
+
+    $i = 0;
+
+    $quantiteHasChanged = $pdo->query('SELECT disponibilite FROM aperirond WHERE disponibilite!=1000');
+    while($row = $quantiteHasChanged->fetch()) {
+        $disponibilite[$i] =1000 - (int)$row['disponibilite'];
+        $i++;
+    }
+
+    return $disponibilite;
+}
+
+
+function getPrix(&$pdo) {
+
+    $prix = [];
+
+    $i = 0;
+
+    $quantiteHasChanged = $pdo->query('SELECT prix FROM aperirond WHERE disponibilite!=1000');
+    while($row = $quantiteHasChanged->fetch()) {
+        $prix[$i] =$row['prix'];
+        $i++;
+    }
+
+    return $prix;
+}
+
+function getImageUrl(&$pdo) {
+
+    $img_url = [];
+
+    $i = 0;
+
+    $quantiteHasChanged = $pdo->query('SELECT image_url FROM aperirond WHERE disponibilite!=1000');
+    while($row = $quantiteHasChanged->fetch()) {
+        $img_url[$i] =$row['image_url'];
+        $i++;
+    }
+
+    return $img_url;
+}
+
+
 function PrintVarietyNutella(&$pdo){
     $rows = $pdo->query('SELECT * FROM aperirond WHERE variete="nutella"');
 //    while($row = $rows->fetch(PDO::FETCH_ASSOC)) {
@@ -210,10 +290,9 @@ $acc=0;
 
         //$id = idMaryjane($pdo);
         modifStock($pdo, $_POST['qtemaryjane'], 6);
-        echo calculPrix($pdo, $_POST['qtemaryjane'],$acc, 6);
-    }else{
-        echo calculPrix($pdo, 0,$acc, 6); //////////////////// ligne à gérer
+        echo calculPrix($pdo, $_POST['qtemaryjane'], $acc, 6);
     }
+        //echo calculPrix($pdo, 0,$acc, 6); //////////////////// ligne à gérer
 
 
 /**
@@ -261,22 +340,48 @@ function modifStock(&$pdo, $qte, $paraId)
  * @return string
  * ##################################" FOnction de calcul du prix par variété et prix total #######################
  */
-function calculPrix(&$pdo, $qte, &$acc, $paraId){
+function calculPrixNutella($qte){
 
-    $rows = $pdo->query("SELECT id, prix FROM aperirond WHERE id=$paraId");
+    $nutella = 5.29;
 
-    while ($row = $rows->fetch()) {
-        $row['id'];
-        $prix = $row['prix'];
-        $ttPrix = $prix * $qte;
-        $acc=$acc+$ttPrix;
-        echo 'Le prix pour indice : '.$paraId.' est : '.$ttPrix.PHP_EOL;
-
-        return 'Prix total de la commande : ' . $acc . '€';
-
+    return $qte * $nutella;
     }
 
-}
+function calculPrixCactus($qte){
+
+    $cactus  = 2.99;
+
+    return $qte * $cactus;
+    }
+
+function calculFraise($qte){
+
+    $fraise = 3.99;
+
+    return $qte * $fraise;
+    }
+
+
+function calculPrixSiropErable($qte){
+
+    $siroperable = 4.99;
+
+    return $qte * $siroperable;
+    }
+
+function calculPrixVegan($qte){
+
+    $vegan = 6.99;
+
+    return $qte * $vegan;
+    }
+
+function calculMJ($qte){
+
+    $maryjane = 14.99;
+
+    return $qte * $maryjane;
+    }
 
 
 include 'layout/footer.php'?>

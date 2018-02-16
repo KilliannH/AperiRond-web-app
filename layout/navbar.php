@@ -4,8 +4,8 @@
         <p>Nos chouettes recettes</p>
     </div>
         <div class="col-md-8 nav_minim_fredoka">
-            <p>AperiRond
-            </p>
+            <a href="../index.php">AperiRond
+            </a>
         </div>
       <div class="col-md-2 nav_minim_right">
           <a href="/layout/login.php"><i class="fa fa-user"></i></a>

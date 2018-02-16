@@ -9,7 +9,6 @@ $password = 'root';
 try {
     $pdo = new PDO('mysql:host='.$host.';port='.$port. ';dbname='.$db, $login, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    echo 'DB connected';
     // Ajouter un utilisateur dans la table user
 //    $pdo->exec('INSERT INTO users (email,firstname,lastname) VALUES ("boby@ouiiiii.fr","bo","by")');
     // Afficher le dernier ID
