@@ -1,8 +1,14 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">AperiRond</a>
+<nav>
+  <div class="container-fluid nav_minim">
+    <div class="col-md-2 nav_minim_left">
+        <p>Nos chouettes recettes</p>
     </div>
-    <p class="navbar-text navbar-right"><i class="fa fa-user fa-lg"></i><i class="fa fa-cart-arrow-down fa-lg"></i></p>
-  </div>
+        <div class="col-md-8 nav_minim_fredoka">
+            <p>AperiRond
+            </p>
+        </div>
+      <div class="col-md-2 nav_minim_right">
+          <a href="/layout/login.php"><i class="fa fa-user"></i></a>
+          <a href="/layout/panier.php"><i class="fa fa-shopping-cart"></i></a>
+      </div>
 </nav>
